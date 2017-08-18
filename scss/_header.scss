@@ -1,0 +1,437 @@
+/* header */
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 7000;
+    height: 128px;
+}
+.header-push {
+    height: 128px;
+}
+.header-center {
+    text-align: center;
+}
+.header-menu {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    font-size: 0;
+    line-height: 0;
+    margin-left: -40px;
+    padding-top: 76px;
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 40px;
+        a {
+            display: block;
+            font: 200 14px/1.43 $fc;
+            text-transform: uppercase;
+            color: $w;
+            letter-spacing: 0.25px;
+            position: relative;
+            &:hover {
+                .line {
+                    &:before {
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                }
+            }
+        }
+        &.active {
+            .line-active {
+                display: block;
+            }
+            .line {
+                display: none;
+            }
+        }
+    }
+}
+.line,
+.line-active {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 1px;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $lh;
+        @include transform(translate3d(-100%, 0, 0));
+        @include transition(transform $d $f);
+    }
+}
+.line-active {
+    display: none;
+    top: -76px;
+    height: 3px;
+    &:before {
+        background: $w;
+        @include transition(transform $d*2 $f);
+    }
+}
+.doc-loaded {
+    .line-active {
+        &:before {
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 70px;
+    a {
+        display: block;
+        width: 124px;
+        height: 128px;
+        background: $w;
+        padding: 18px 14px 0 14px;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+.menu-toggle {
+    display: block;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    left: 66px;
+    top: 67px;
+    overflow: hidden;
+    &:hover {
+        .menu-toggle-ico {
+            @include transform(translate3d(-8px, 0, 0));
+        }
+    }
+}
+.menu-toggle-ico {
+    top: 16px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $w;
+    position: absolute;
+    @include transition(transform $d $f);
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $w;
+        height: 100%;
+        @include transform(translate3d(0, -10px, 0));
+        @include transition(transform $d $f);
+    }
+    &:after {
+        @include transform(translate3d(-11px, 10px, 0));
+    }
+}
+.header-user {
+    position: absolute;
+    right: 66px;
+    top: 45px;
+    overflow: hidden;
+}
+.header-user-link {
+    display: block;
+    width: 204px;
+    @include transition(transform $d*2 $f);
+    @include transform(translate3d(126px, 0, 0));
+    &:hover {
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+.header-user-avatar {
+    float: left;
+    width: 78px;
+    height: 78px;
+    margin-right: 18px;
+    padding: 10px;
+    border: 1px solid rgba(246, 247, 249, 0.2);
+    border-radius: 50%;
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+}
+.header-user-info-block {
+    display: block;
+    overflow: hidden;
+    padding-top: 17px;
+}
+.header-user-name {
+    display: block;
+    margin-bottom: 7px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font: bold 14px/1.43 $fc;
+    text-transform: uppercase;
+    color: $w;
+    letter-spacing: 0.25px;
+}
+.header-user-info {
+    float: left;
+    margin-right: 18px;
+    font: 200 14px/1.43 $fc;
+    letter-spacing: 0.25px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.header-user-info-arrow {
+    float: left;
+    margin-top: 6px;
+    width: 25px;
+    height: 9px;
+    .svg-stroke {
+        stroke: #f6f7f9;
+    }
+}
+.header-login {
+    position: absolute;
+    right: 66px;
+    top: 56px;
+    overflow: hidden;
+}
+.header-login-button {
+    display: block;
+    width: 150px;
+    @include transition(transform $d*2 $f);
+    @include transform(translate3d(94px, 0, 0));
+    &:hover {
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+.header-login-ico {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin-right: 16px;
+}
+.header-login-text {
+    display: block;
+    overflow: hidden;
+    padding-top: 19px;
+}
+.header-login-title {
+    float: left;
+    font: bold 14px/1.43 $fc;
+    text-transform: uppercase;
+    color: $w;
+    letter-spacing: 0.25px;
+}
+.header-login-arrow {
+    float: right;
+    margin-top: 4px;
+    width: 25px;
+    height: 9px;
+    .svg-stroke {
+        stroke: #f6f7f9;
+    }
+}
+.menu-open {
+    overflow: hidden;
+    body {
+        overflow: hidden;
+    }
+    .menu-overflow {
+        display: block;
+    }
+    .menu-mask {
+        @include animation(fadeInMenu 0.3s $f);
+        @include animation-fill-mode(both);
+    }
+    .menu-block {
+        @include animation(slideInMenu 0.3s $f);
+        @include animation-fill-mode(both);
+    }
+}
+.menu-open-hide {
+    .menu-overflow {
+        display: block;
+        overflow: hidden;
+    }
+    .menu-mask {
+        @include animation(fadeOutMenu 0.3s $fr);
+        @include animation-fill-mode(both);
+    }
+    .menu-block {
+        @include animation(slideOutMenu 0.3s $fr);
+        @include animation-fill-mode(both);
+    }
+}
+.menu-overflow {
+    z-index: 8000;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+}
+.menu-mask {
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $black;
+}
+.menu-main {
+    position: relative;
+}
+.menu-block-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+.menu-block {
+    width: 400px;
+    max-width: 100%;
+    background: $bg;
+    padding: 0 66px;
+    position: relative;
+    @include transform(translate3d(-101%, 0, 0));
+}
+.menu-close {
+    display: block;
+    position: absolute;
+    left: 62px;
+    top: 67px;
+    width: 33px;
+    height: 33px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $b;
+        @include transform(rotate(-45deg));
+        @include transition(transform $d $f);
+    }
+    &:after {
+        @include transform(rotate(45deg));
+    }
+    &:hover {
+        &:before {
+           @include transform(scale(1.1) rotate(-45deg));
+        }
+        &:after {
+            @include transform(scale(1.1) rotate(45deg));
+        }
+    }
+}
+.menu-wrapper {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.menu-row {
+    display: table-row;
+}
+.menu-cell {
+    padding-top: 160px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.menu-cell-bottom {
+    display: table-cell;
+    vertical-align: top;
+}
+.menu-info {
+    padding-top: 33px;
+    height: 200px;
+}
+.menu-apply {
+    font: bold 26px/1.15 $fc;
+    letter-spacing: 0.5px;
+    padding-bottom: 33px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #b7c4ad;
+}
+.menu-apply-button {
+    display: inline-block;
+    vertical-align: top;
+    color: $b;
+    border-bottom: 2px solid $tr;
+    &:hover {
+        color: $b;
+        border-bottom-color: $b;
+    }
+}
+.menu-copyright {
+    font-size: 14px;
+    line-height: 1.286;
+    color: #99a390;
+    text-transform: uppercase;
+}
+.menu {
+    display: block;
+    li {
+        font: 18px/1 $fc;
+        letter-spacing: 0.8px;
+        margin-bottom: 40px;
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            color: $b;
+            border-bottom: 2px solid $tr;
+            &:hover {
+                .arrow {
+                    .svg {
+                        opacity: 1;
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                }
+            }
+        }
+        &.active {
+            a {
+                border-bottom-color: $b;
+                .arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.arrow {
+    display: block;
+    position: absolute;
+    left: 100%;
+    margin-left: 16px;
+    top: 50%;
+    margin-top: -4px;
+    width: 42px;
+    height: 9px;
+    overflow: hidden;
+    .svg {
+        opacity: 0;
+        @include transform(translate3d(-100%, 0, 0));
+        @include transition(transform $d $f, opacity $d $f);
+    }
+}

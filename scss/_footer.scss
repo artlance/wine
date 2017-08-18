@@ -1,0 +1,43 @@
+/* footer */
+footer {
+    margin-top: -$footer;
+    height: $footer;
+    background: rgba(47, 17, 28, 0.68);
+    padding: 31px 0;
+    color: $l;
+}
+.footer-copyright {
+    padding: 25px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    p, a {
+        color: rgba(199, 93, 118, 0.5);
+    }
+    a {
+        border-bottom: 1px solid rgba(199, 93, 118, 0.5);
+        &:hover {
+            color: $l;
+            border-bottom-color: $l;
+        }
+    }
+}
+.footer-title {
+    font-size: 14px;
+    line-height: 1.286;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
+.footer-newsletter {}
+.footer-newsletter-button {
+    float: right;
+    width: 69px;
+    height: 69px;
+    &:hover {
+        .svg-stroke {
+            stroke: $lh;
+        }
+        .svg-fill {
+            fill: $lh;
+        }
+    }
+}

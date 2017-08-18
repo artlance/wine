@@ -1,0 +1,40 @@
+$footer: 242px;
+
+$fontSize: 16px;
+$lineHeight: 2.25;
+$spacer: 36px;                                                                                   $sp: $spacer;
+$fontFamily: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;                        $ff: $fontFamily;
+$fontCirce: 'Circe', Arial, "Helvetica Neue", Helvetica, sans-serif;                             $fc: $fontCirce;
+$fontNexa: 'Nexa Script', Arial, "Helvetica Neue", Helvetica, sans-serif;                        $fn: $fontNexa;
+$fontGeorgia: Georgia, Times, "Times New Roman", serif;                                          $fg: $fontGeorgia;
+
+$duration: 0.15s;                               $d: $duration;
+$function: cubic-bezier(0.4, 0.0, 0.2, 1);      $f: $function;
+$function-reverse: cubic-bezier(0.2, 0.0, 0.4, 1);      $fr: $function-reverse;
+
+$primary: #3d1826;                              $p: $primary;
+$secondary: #341320;                            $s: $secondary;
+$tertiary: #000000;                             $t: $tertiary;
+$background: #d7e6cb;                           $bg: $background;
+$text: #e4cfd7;                                 $txt: $text;
+$link: #c75d76;                                 $l: $link;
+$link-hover: #d86883;                           $lh: $link-hover;
+
+$white: #ffffff;                                $w: $white;
+$black: #000000;                                $b: $black;
+$dark-gray: #333333;                            $dgr: $dark-gray;
+$gray: #999999;                                 $gr: $gray;
+$light-gray: #eeeeee;                           $lgr: $light-gray;
+$green: #00cc33;                                $gn: $green;
+$red: #ff0000;                                  $r: $red;
+$transparent: transparent;                      $tr: $transparent;
+
+$font-thin: 100;
+$font-extra-light: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-demi-bold: 600;
+$font-bold: 700;
+$font-heavy: 800;
+$font-black: 900;

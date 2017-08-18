@@ -1,0 +1,15 @@
+/* grid */
+.main {
+    min-height: 100%;
+    overflow: hidden;
+    padding-bottom: $footer;
+    background: url('../upload/background.jpg') 50% calc(100% - 242px) no-repeat;
+    @include bgsize(100%);
+}
+.wrap {
+    padding: 0 60px;
+    @extend .clearfix;
+}
+.desktop-margin-0 {
+    margin: 0;
+}

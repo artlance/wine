@@ -1,0 +1,32 @@
+@include keyframes(fadeInMenu) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+@include keyframes(fadeOutMenu) {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@include keyframes(slideInMenu) {
+    0% {
+        @include transform(translate3d(-101%, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+@include keyframes(slideOutMenu) {
+    0% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(-101%, 0, 0));
+    }
+}

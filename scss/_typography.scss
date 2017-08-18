@@ -1,0 +1,200 @@
+/* typography */
+.svg {
+    display: block;
+    svg {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+.svg-stroke,
+.svg-fill {
+    @include transition(stroke $d*2 $f, fill $d*2 $f);
+}
+a {
+    color: $link;
+    text-decoration: none;
+    background-color: $tr;
+    @include transition(color $d $f, background-color $d $f, border-color $d $f);
+    &:hover {
+        color: $link-hover;
+    }
+    &.underline {
+        text-decoration: underline;
+    }
+}
+.clear-30 {
+    clear: both;
+    display: block;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+}
+.quote {
+    height: 19px;
+    margin-bottom: 41px;
+    position: relative;
+}
+.quote-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 41%;
+        background: #8b4055;
+    }
+    &:after {
+        left: auto;
+        right: 0;
+    }
+}
+.quote-ico,
+.quote-ico-inverse {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -10px;
+    width: 24px;
+    height: 19px;
+}
+.quote-ico-inverse {
+    .svg {
+        @include transform(rotate(-180deg));
+    }
+}
+.wysiwyg {
+    @extend .clearfix;
+    h1 {
+        font-size: $fontSize*2;
+        margin-bottom: $spacer;
+    }
+    h2 {
+        font: 30px/1.6 $fc;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+        color: $w;
+        margin-bottom: 43px;
+    }
+    h3 {
+        font: 24px/1.25 $fc;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $w;
+        margin-bottom: 46px;
+    }
+    h4 {
+        font-size: $fontSize;
+    }
+    h5 {
+        font-size: $fontSize;
+    }
+    h6 {
+        font-size: $fontSize;
+    }
+    p {
+        font-weight: 300;
+        margin-bottom: $spacer;
+    }
+    figure {
+        margin-bottom: 62px;
+        img {
+            width: 100%;
+            margin-bottom: 21px;
+        }
+    }
+    figcaption {
+        font: italic 16px/1.875 $fg;
+        color: #cb5d77;
+    }
+    blockquote {
+        padding: 36px 0 17px;
+        text-align: center;
+        p {
+            font: 18px/2 $fc;
+            text-transform: uppercase;
+            color: $w;
+            letter-spacing: 0.25px;
+            margin-bottom: 29px;
+        }
+        em {
+            display: block;
+            font: italic 16px/1.875 $fg;
+            color: $l;
+            margin-bottom: 40px;
+        }
+    }
+    a {
+        color: $w;
+        border-bottom: 1px solid $w;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+    img {
+        display: block;
+        margin: 0 0 $spacer;
+        &.align-left {
+            margin: 0 $spacer $spacer 0;
+        }
+        &.align-right {
+            margin: 0 0 $spacer $spacer;
+        }
+        &.align-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    hr {
+        clear: both;
+        height: 48px;
+        margin: 0 0 66px;
+        border: 0;
+        border-bottom: 1px solid #6f555f;
+        &.transparent {
+            border-bottom-color: $transparent;
+        }
+    }
+    ul {
+        overflow: hidden;
+        margin-bottom: $spacer;
+        list-style: inside disc;
+        li {
+            padding-left: $spacer;
+        }
+    }
+    ol {
+        overflow: hidden;
+        margin-bottom: $spacer;
+        list-style: inside decimal;
+        li {
+            padding-left: $spacer;
+        }
+    }
+    table {
+        margin-bottom: $spacer;
+        th {
+            padding: $spacer/2 $spacer;
+            background: $light-gray;
+            border: 1px solid $light-gray;
+        }
+        td {
+            padding: $spacer/2 $spacer;
+            border: 1px solid $light-gray;
+        }
+    }
+}
