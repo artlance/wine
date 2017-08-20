@@ -313,7 +313,8 @@ header {
     position: relative;
     @include transform(translate3d(-101%, 0, 0));
 }
-.menu-close {
+.menu-close,
+.close {
     display: block;
     position: absolute;
     left: 62px;
@@ -343,6 +344,11 @@ header {
             @include transform(scale(1.1) rotate(45deg));
         }
     }
+}
+.close {
+    left: auto;
+    right: 19px;
+    top: 22px;
 }
 .menu-wrapper {
     display: table;

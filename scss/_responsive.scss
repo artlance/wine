@@ -437,4 +437,82 @@
         font-weight: normal;
         max-height: 180px;
     }
+    .modal {
+        width: 300px;
+        padding: 53px 15px 15px;
+        &.modal-wide {
+            width: 400px;
+        }
+    }
+    .close {
+        right: 9px;
+        top: 9px;
+    }
+    .modal-title {
+        margin-bottom: 6px;
+    }
+    .input-text-wrapper {
+        margin-bottom: 13px;
+    }
+    .input-error {
+        right: 10px;
+        bottom: 12px;
+    }
+    input.input-text {
+        height: 47px;
+        padding-top: 11px;
+        padding-bottom: 8px;
+    }
+    textarea.textarea {
+        height: 100px;
+    }
+    a.button,
+    input.button,
+    button.button {
+        height: 54px;
+        min-width: 0;
+        width: 100%;
+        padding-top: 11px;
+        padding-bottom: 7px;
+    }
+    .modal-forgot-password {
+        margin-top: -5px;
+        margin-bottom: 33px;
+    }
+    .modal-save-password {
+        margin-bottom: 16px;
+    }
+    .modal-bottom {
+        padding-top: 10px;
+    }
+    .modal-button {
+        float: none;
+        margin-bottom: 27px;
+    }
+    .modal-apply {
+        float: none;
+        margin-top: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .modal-feedback-success {
+        padding: 40px 0 64px;
+    }
+    .modal-feedback-user {
+        padding-top: 12px;
+        padding-bottom: 21px;
+    }
+    .modal-event {
+        padding: 20px 0 50px;
+    }
+    .modal-event-info {
+        font-size: 22px;
+        margin-bottom: 50px;
+        strong {
+            font-size: 24px;
+        }
+    }
+    a.modal-event-button {
+        letter-spacing: 0.5px;
+    }
 }

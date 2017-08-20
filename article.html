@@ -390,7 +390,7 @@
                 <!-- /.col -->
                 <div class="col-md-3">
                     <div class="footer-newsletter clearfix">
-                        <a href="#" class="footer-newsletter-button">
+                        <a href="#modal-feedback" data-toggle="modal" class="footer-newsletter-button">
                             <span class="svg">
                                 <svg width="69" height="69" viewBox="0 0 69 69" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle stroke="#C75D76" class="svg-stroke" cx="34.5" cy="34.5" r="34"/><path stroke="#C75D76" class="svg-stroke" d="M19.5 25.5h30v20h-30z"/><path fill="#C75D76" class="svg-fill" d="M49.5 26l-15 9.37-15-9.37"/></g></svg>
                             </span>
@@ -403,6 +403,38 @@
         </div>
         <!-- /.container -->
     </footer>
+    <div class="modal modal-center" id="modal-feedback" tabindex="-1" role="dialog">
+        <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
+        <div class="modal-form clearfix">
+            <div class="modal-title">Обратная связь</div>
+            <div class="modal-feedback-user clearfix">
+                <div class="modal-feedback-user-img"><img src="upload/event-person.jpg" alt=""></div>
+                <div class="modal-feedback-user-info">
+                    <div class="modal-feedback-user-name">Василий</div>
+                    <div class="modal-feedback-user-email">vasya@email.ru</div>
+                </div>
+            </div>
+            <!-- /.modal-feedback-user clearfix -->
+            <div class="input-text-wrapper clearfix">
+                <label for="modal-message">Сообщение</label>
+                <textarea name="modal-message" id="modal-message" cols="30" rows="10" class="textarea" placeholder="Введите текст"></textarea>
+                <div class="input-error"></div>
+            </div>
+            <!-- /.input-text-wrapper -->
+            <div class="modal-bottom clearfix">
+                <div class="modal-button">
+                    <input type="submit" class="button" value="Отправить" data-target="#modal-feedback-success" data-toggle="modal" data-dismiss="modal">
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-form clearfix -->
+    </div>
+    <!-- /.modal -->
+    <div class="modal modal-center" id="modal-feedback-success" tabindex="-1" role="dialog">
+        <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
+        <div class="modal-feedback-success">Ваше письмо отправлено! <br>В ближайшее время мы вам ответим.</div>
+    </div>
+    <!-- /.modal -->
     <script src="js/jquery.js"></script>
     <script src="js/migrate.js"></script>
     <script src="js/library.js"></script>

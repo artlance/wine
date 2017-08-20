@@ -557,3 +557,111 @@ a.event-other-item-link {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+.registration-page-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 636px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    @include bgsize();
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+.registration {
+    padding: 50px 0 100px;
+    position: relative;
+}
+.registration-block {
+    padding: 57px 40px 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: $bg;
+    @include box-shadow(0 10px 25px rgba(17, 3, 8, 0.15));
+}
+.registration-content {
+    max-width: 602px;
+    margin: 0 auto;
+    color: $b;
+}
+.registration-caption {
+    text-align: center;
+    font-family: $fc;
+    h1 {
+        font-size: 40px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 26px;
+    }
+}
+.registration-caption-ico {
+    margin: 0 auto 14px;
+    width: 82px;
+    height: 80px;
+    background: $gr;
+}
+.registration-caption-steps {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 -19px 37px;
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 19px;
+        font-size: 13px;
+        line-height: 1.4;
+        color: #a2b097;
+        border-bottom: 2px solid $tr;
+        &.active {
+            color: $b;
+            font-weight: bold;
+            border-bottom-color: $b;
+        }
+        &.done {
+            color: $b;
+            font-weight: bold;
+            border-bottom-color: $tr;
+        }
+    }
+}
+.registration-caption-note {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 200;
+    color: #010101;
+}
+.registration-button {
+    padding-top: 40px;
+    text-align: center;
+}
+.registration-type {
+    margin-bottom: 22px;
+}
+.registration-type-list {
+}
+.registration-type-radio {
+}
+.registration-type-block {
+}
+.registration-type-content {
+}
+.registration-type-caption {
+}
+.registration-type-options {
+}
+.registration-type-option {
+}
+.registration-type-option-disabled {
+}
+.registration-type-check {
+}

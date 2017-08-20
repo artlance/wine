@@ -90,6 +90,47 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+     //centerModal
+    function centerModal() {
+        var modalName = $('.modal-center');
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        modalName.each(function() {
+            var modalOuterWidth = $(this).outerWidth();
+            var modalOuterHeight = $(this).outerHeight();
+            $(this).css({
+                margin: 0
+            });
+            if (windowHeight > modalOuterHeight) {
+                $(this).css({
+                    top: (windowHeight - modalOuterHeight) /2
+                });
+            } else {
+               $(this).css({
+                    top: 0
+                });
+            }
+            if (windowWidth > modalOuterWidth) {
+                $(this).css({
+                    left: (windowWidth - modalOuterWidth) /2
+                });
+            } else {
+               $(this).css({
+                    left: 0
+                });
+            }
+        });
+    }
+    $('[data-toggle="modal"]').on('click', function() {
+        centerModal();
+    });
+    $(window).resize(function(){
+        centerModal();
+    });
+    centerModal();
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 //*********************************************************************//
