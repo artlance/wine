@@ -191,6 +191,45 @@
         margin-bottom: 0;
         padding-top: 9px;
     }
+    .registration-page {
+        .header-push {
+            display: none;
+        }
+        .menu-toggle-ico {
+            background-color: $b;
+            &:before,
+            &:after {
+                background-color: $b;
+            }
+        }
+    }
+    .registration-page-bg {
+        display: none;
+    }
+    .registration {
+        padding: 0;
+    }
+    .registration-block {
+        padding: 182px 75px 100px;
+        max-width: none;
+        width: auto;
+        margin: 0;
+        @include box-shadow(none);
+    }
+    .registration-content {
+        max-width: none;
+        width: auto;
+        margin: 0;
+    }
+    .input-text-wrapper.big,
+    .registration-form-confirm {
+        .input-error {
+            right: -48px;
+        }
+    }
+    .registration-done {
+        padding: 35px 0 59px;
+    }
 }
 @include media-breakpoint-down(sm) {
     .main {
@@ -474,6 +513,9 @@
         width: 100%;
         padding-top: 11px;
         padding-bottom: 7px;
+        &.big {
+            width: auto;
+        }
     }
     .modal-forgot-password {
         margin-top: -5px;
@@ -514,5 +556,56 @@
     }
     a.modal-event-button {
         letter-spacing: 0.5px;
+    }
+    .registration-block {
+        padding: 191px 20px 65px;
+    }
+    .registration-caption {
+        h1 {
+            font-size: 30px;
+            letter-spacing: 2.4px;
+            margin-bottom: 29px;
+        }
+    }
+    .registration-type-block {
+        padding: 26px 30px 30px 0;
+        &:before {
+            left: -20px;
+            right: -20px;
+        }
+    }
+    .registration-type-check {
+        right: 0;
+        top: 30px;
+    }
+    .registration-type-caption {
+        font-size: 24px;
+        line-height: 1.67;
+        margin-bottom: 15px;
+    }
+    .input-text-wrapper.big {
+        margin-bottom: 23px;
+        .input-error {
+            right: 10px;
+        }
+    }
+    .registration-form-confirm {
+        padding-bottom: 0;
+        .input-error {
+            right: 10px;
+        }
+        .checkbox.big {
+            label {
+                padding-right: 30px;
+                padding-left: 40px;
+                letter-spacing: 0;
+            }
+        }
+    }
+    .registration-form-error {
+        padding-bottom: 0;
+    }
+    .registration-done {
+        padding: 16px 0 12px;
     }
 }

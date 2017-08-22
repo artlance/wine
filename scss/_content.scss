@@ -595,6 +595,7 @@ a.event-other-item-link {
 .registration-caption {
     text-align: center;
     font-family: $fc;
+    margin-bottom: 40px;
     h1 {
         font-size: 40px;
         line-height: 1.2;
@@ -607,7 +608,8 @@ a.event-other-item-link {
     margin: 0 auto 14px;
     width: 82px;
     height: 80px;
-    background: $gr;
+    background: url('../images/icon-registration_c.svg') 0 0 no-repeat;
+    @include bgsize(82px 80px);
 }
 .registration-caption-steps {
     display: block;
@@ -644,24 +646,163 @@ a.event-other-item-link {
     padding-top: 40px;
     text-align: center;
 }
+.registration-button-left {
+    text-align: left;
+}
 .registration-type {
     margin-bottom: 22px;
 }
 .registration-type-list {
+    display: block;
 }
 .registration-type-radio {
+    display: block;
+    border-bottom: 1px solid #a2b097;
+    input {
+        display: none;
+        &:checked + label {
+            cursor: default;
+            &:before,
+            .registration-type-check {
+                opacity: 1;
+            }
+        }
+        &:disabled + label {
+            cursor: default;
+        }
+    }
+    label {
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 }
 .registration-type-block {
-}
-.registration-type-content {
-}
-.registration-type-caption {
-}
-.registration-type-options {
-}
-.registration-type-option {
-}
-.registration-type-option-disabled {
+    display: block;
+    position: relative;
+    padding: 30px 55px 33px 25px;
+    &:before {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -24px;
+        right: -24px;
+        border: 6px solid $w;
+        @include transition(opacity $d $f);
+    }
+    &:hover {
+        .registration-type-check {
+            opacity: 1;
+        }
+    }
 }
 .registration-type-check {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: 34px;
+    width: 30px;
+    height: 23px;
+    @include transition(opacity $d $f);
+    .svg-stroke {
+        stroke: $b;
+    }
+}
+.registration-type-content {
+    display: block;
+    position: relative;
+    span {
+        display: block;
+    }
+}
+.registration-type-caption {
+    font-family: $fc;
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    span {
+        display: inline;
+    }
+}
+.registration-type-options {
+    font: 200 18px/1.67 $fc;
+}
+.registration-type-option {
+    color: #010101;
+}
+.registration-type-option-disabled {
+    color: #a4b596;
+}
+.registration-form {
+    h4 {
+        font: bold 20px/1.2 $fc;
+        color: #010101;
+        padding: 6px 0 17px;
+    }
+}
+.registration-address {
+    padding: 15px 0 17px;
+}
+.registration-form-confirm {
+    padding: 5px 0 15px;
+    .checkbox.big {
+        label {
+            font-size: 13px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            padding-left: 64px;
+            padding-top: 0;
+            a {
+                color: $b;
+                border-bottom: 1px solid $b;
+            }
+            &:before {
+                top: 7px;
+                opacity: 0.5;
+            }
+        }
+        .checkbox-check {
+            top: 13px;
+        }
+    }
+    .input-error {
+        right: -64px;
+        bottom: auto;
+        top: 19px;
+    }
+    &.error {
+        .input-error {
+            display: block;
+        }
+    }
+}
+.registration-form-error {
+    padding: 40px 0 11px;
+    font: 300 16px/1.5 $ff;
+    color: #da3030;
+}
+.registration-done {
+    padding: 50px 0 44px;
+    text-align: center;
+    font-family: $fc;
+    color: #010101;
+    h3 {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: bold;
+        margin-bottom: 33px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 200;
+    }
 }

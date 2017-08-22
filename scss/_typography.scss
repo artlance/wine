@@ -26,12 +26,16 @@ a {
         text-decoration: underline;
     }
 }
-.clear-30 {
+.clear-30,
+.clear-24 {
     clear: both;
     display: block;
     height: 30px;
     font-size: 0;
     line-height: 0;
+}
+.clear-24 {
+    height: 24px;
 }
 .quote {
     height: 19px;
