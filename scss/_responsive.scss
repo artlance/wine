@@ -230,6 +230,26 @@
     .registration-done {
         padding: 35px 0 59px;
     }
+    .preview-options {
+        margin-bottom: 47px;
+    }
+    a.preview-cancel {
+        margin-top: 80px;
+    }
+    .preview-options-left {
+        min-width: 0;
+        text-align: center;
+    }
+    a.preview-edit {
+        float: none;
+        margin-top: 0;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 32px;
+    }
+    .preview-publish {
+        float: none;
+    }
 }
 @include media-breakpoint-down(sm) {
     .main {
@@ -479,8 +499,11 @@
     .modal {
         width: 300px;
         padding: 53px 15px 15px;
-        &.modal-wide {
+        &.modal-wide,
+        &.modal-wide-800 {
             width: 400px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
     .close {
@@ -607,5 +630,40 @@
     }
     .registration-done {
         padding: 16px 0 12px;
+    }
+    .registration-select {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 26px;
+        width: auto;
+        .input-error {
+            bottom: auto !important;
+            top: 10px;
+        }
+    }
+    .preview-title {
+        font-size: 17px;
+        letter-spacing: 0.5px;
+    }
+    a.preview-cancel {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+    .preview-options-left {
+        float: none;
+        text-align: left;
+    }
+    a.preview-edit {
+        margin-left: 6px;
+        margin-bottom: 46px;
+    }
+    .modal-event-cancel-title {
+        font-size: 22px;
+    }
+    .modal-event-cancel {
+        padding-bottom: 40px;
     }
 }

@@ -136,6 +136,54 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    function refreshLang( value, parent ) {
+        var langNum = value;
+        var langText = '';
+        switch(langNum) {
+            case 2:
+                langText = 'ЧИТАЮ И ПЕРЕВОЖУ СО СЛОВАРЕМ';
+                break;
+            case 3:
+                langText = 'МОГУ ОТВЕЧАТЬ НА ПИСЬМА';
+                break;
+            case 4:
+                langText = 'Я У МАМЫ МОЛОДЕЦ';
+                break;
+            case 5:
+                langText = 'НЭЙТИВ СПИКЕР';
+                break;
+            default:
+                langText = 'АЙ СПИК ФРОМ МАЙ ХАРТ';
+        }
+        $(parent).next('.registration-language-level-text').text(langText);
+    }
+
+    //language level
+    $('.slider-level').each(function(index, el) {
+        var thisElement = $(this);
+        thisElement.slider({
+            min: 1,
+            max: 5,
+            range: "min",
+            step: 1,
+            value: 3,
+            change: function( event, ui ) {
+                refreshLang(ui.value, ui.handle.parentElement);
+            },
+            slide: function( event, ui ) {
+                refreshLang(ui.value, ui.handle.parentElement);
+            },
+            create: function( event, ui ) {
+                refreshLang(3, thisElement);
+            }
+        });
+    });
+
+    $('.slider-level').eq(1).slider( 'value', 2 );
+
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 //*********************************************************************//
