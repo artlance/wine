@@ -280,6 +280,7 @@ button.button {
         border-color: #a0b78e;
         &.button-with-arrow {
             &:hover {
+                background-color: $tr;
                 color: #849a73;
             }
         }

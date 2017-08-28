@@ -76,13 +76,15 @@ header {
     top: -76px;
     height: 3px;
     &:before {
+        opacity: 0;
         background: $w;
-        @include transition(transform $d*2 $f);
+        @include transition(transform $d*2 $f, opacity $d $f);
     }
 }
 .doc-loaded {
     .line-active {
         &:before {
+            opacity: 1;
             @include transform(translate3d(0, 0, 0));
         }
     }
