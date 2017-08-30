@@ -231,6 +231,60 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //gallery main slider
+    var swiper = new Swiper('.gallery-main-slider', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        slidesPerView: 1,
+        centeredSlides: false,
+        spaceBetween: 0
+    });
+
+    //------------------------------------------------------------------------//
+
+    //gallery main albums
+    var initSlidesPerColumnAlbums = 3;
+    if ( $(document).innerWidth() <= 1259 ) {
+        initSlidesPerColumnAlbums = 1;
+    }
+
+    var swiper = new Swiper('.gallery-main-albums-slider', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        slidesPerView: 2,
+        slidesPerColumn: initSlidesPerColumnAlbums,
+        centeredSlides: false,
+        spaceBetween: 30,
+        breakpoints: {
+            1259: {
+                slidesPerView: 1
+            },
+            639: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            }
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //study video slider
+    var swiper = new Swiper('.study-video-slider', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        slidesPerView: 1,
+        centeredSlides: false,
+        spaceBetween: 0
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 //*********************************************************************//
