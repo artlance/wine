@@ -106,6 +106,9 @@
         figure {
             margin-left: -75px;
             margin-right: -75px;
+            iframe {
+                max-height: 450px;
+            }
         }
         figcaption {
             padding-left: 75px;
@@ -488,6 +491,23 @@
             font-size: 17px;
         }
     }
+    .hero-title.hero-title-small {
+        margin-bottom: 31px;
+    }
+    .content-list {
+        margin-left: 0;
+        padding: 0 0 31px;
+    }
+    .thanks {
+        padding-top: 0;
+    }
+    .thanks-row {
+        padding: 0;
+    }
+    .thanks-col {
+        float: none;
+        width: auto;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -640,8 +660,12 @@
             margin-left: -20px;
             margin-right: -20px;
             margin-bottom: 46px;
-            img {
+            img,
+            iframe {
                 margin-bottom: 16px;
+            }
+            iframe {
+                max-height: 235px;
             }
         }
         figcaption {
@@ -1290,5 +1314,54 @@
     }
     .study-video-author {
         color: #c75d76;
+    }
+    .hero-title.hero-title-small {
+        padding-top: 12px;
+        margin-bottom: 25px;
+    }
+    .hero-title.hero-title-small,
+    .hero-title.hero-title-small h1 {
+        font: 30px/1.2 $ff;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .hero-info {
+        &.hero-info-small {
+            font-size: 17px;
+            line-height: 2.12;
+            letter-spacing: 0.8px;
+        }
+    }
+    .content-list {
+        max-width: none;
+        padding-bottom: 19px;
+        ul {
+            margin-bottom: 18px;
+            li {
+                font-weight: 300;
+                margin-bottom: 20px;
+                strong {
+                    display: block;
+                    font-family: $ff;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .thanks-col {
+        padding: 0;
+    }
+    .thanks-title {
+        margin-bottom: 46px;
+    }
+    .thanks-item {
+        font-weight: 300;
+        margin-bottom: 40px;
+        strong {
+            display: block;
+            margin-bottom: 4px;
+            font-family: $ff;
+            font-weight: 300;
+        }
     }
 }

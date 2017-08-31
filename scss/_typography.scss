@@ -117,6 +117,12 @@ a {
             width: 100%;
             margin-bottom: 21px;
         }
+        iframe {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 21px;
+        }
     }
     figcaption {
         font: italic 16px/1.875 $fg;

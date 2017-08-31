@@ -285,6 +285,14 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //content list
+    $('.content-list-toggle').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.content-list').toggleClass('open');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 //*********************************************************************//
