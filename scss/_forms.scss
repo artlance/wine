@@ -550,3 +550,112 @@ a.modal-event-button {
     vertical-align: top;
     margin: 0 6px 11px;
 }
+#cke_10, #cke_9, #cke_15:after {
+    display: none !important;
+}
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.ui-datepicker {
+    display: none;
+    width: 300px;
+    padding: 16px 17px 17px;
+    margin-left: 16px;
+    margin-top: 29px;
+    background: $w;
+    @include transform(translate3d(-50%, 0, 0));
+    &:before {
+        content: "";
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        margin-left: -8px;
+        width: 0;
+        height: 0;
+        border: 8px solid $tr;
+        border-bottom-color: $w;
+    }
+}
+.ui-datepicker-header {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    cursor: pointer;
+    position: absolute;
+    width: 26px;
+    height: 30px;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    line-height: 0;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -5px;
+        margin-top: -8px;
+        width: 10px;
+        height: 16px;
+        background: url('../images/next_date_c.svg') 0 0 no-repeat;
+        @include bgsize(10px 16px);
+    }
+}
+.ui-datepicker-prev {
+    right: auto;
+    left: 0;
+    &:after {
+        @include transform(scaleX(-1));
+    }
+}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+    display: none;
+}
+.ui-datepicker-title {
+    text-align: center;
+    padding-top: 2px;
+    font: 18px/28px $fc;
+    color: $b;
+}
+.ui-datepicker-calendar {
+    width: 100%;
+}
+.ui-datepicker-calendar th {
+    color: $b;
+    font: bold 13px/29px $ff;
+    text-align: center;
+    span {
+        cursor: default;
+    }
+}
+.ui-datepicker-calendar td {
+    text-align: center;
+    font: 13px/29px $ff;
+    span {
+        color: rgba(0, 0, 0, 0.25);
+        cursor: default;
+    }
+    a {
+        display: block;
+        color: $b;
+        height: 29px;
+        &:hover {
+            color: $b;
+            background-color: #e8e8e8;
+        }
+        &.ui-state-active {
+            color: $lh;
+            background-color: $w;
+            cursor: default;
+        }
+    }
+}

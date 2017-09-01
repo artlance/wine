@@ -508,6 +508,41 @@
         float: none;
         width: auto;
     }
+    .new-event {
+        padding: 55px 0 70px;
+    }
+    .new-event-caption {
+        margin-bottom: 55px;
+    }
+    .new-event-photo {
+        margin: 0 -75px 68px;
+    }
+    .new-event-photo-label {
+        height: 356px;
+    }
+    .new-event-leader {
+        margin-bottom: 56px;
+    }
+    .new-event-options {
+        .preview-publish {
+            float: left;
+        }
+        a.preview-cancel {
+            margin-top: 0;
+            float: none;
+            display: block;
+            padding-left: 6px;
+        }
+    }
+    .new-event-options-right {
+        width: 204px;
+        margin-top: -3px;
+    }
+    a.new-event-options-preview {
+        float: none;
+        display: block;
+        margin-top: 22px;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -555,6 +590,54 @@
     }
     .fancybox-is-open .fancybox-bg {
         opacity: 0.8;
+    }
+    .new-event-options-right {
+        width: auto;
+    }
+    .new-event-date {
+        width: 160px;
+    }
+    .new-event-date-day {
+        font-size: 60px;
+        margin-bottom: 0;
+    }
+    .new-event-date-month {
+        font-size: 18px;
+    }
+    .new-event-datepicker-label {
+        height: 60px;
+        padding-top: 19px;
+    }
+    .new-event-time-input {
+        width: 110px;
+        height: 67px;
+        & > input {
+            height: 67px;
+            padding-top: 7px;
+            font-size: 60px;
+        }
+    }
+    .new-event-time-up {
+        top: 12px;
+    }
+    .new-event-time-down {
+        top: 43px;
+    }
+    .new-event-time-dots {
+        height: 67px;
+        &:before {
+            top: 22px;
+        }
+        &:after {
+            top: 38px;
+        }
+    }
+    .new-event-title {
+        & > input {
+            height: 68px;
+            font-size: 26px;
+            line-height: 36px;
+        }
     }
 }
 @include media-breakpoint-down(sm) {
@@ -1362,6 +1445,82 @@
             margin-bottom: 4px;
             font-family: $ff;
             font-weight: 300;
+        }
+    }
+    .new-event {
+        padding-top: 92px;
+    }
+    .new-event-caption {
+        h1 {
+            font-size: 23px;
+        }
+    }
+    .new-event-date-wrapper {
+        float: none;
+        padding-right: 0;
+        margin-bottom: 30px;
+        &:before {
+            display: none;
+        }
+    }
+    .new-event-time-wrapper {
+        margin-bottom: 30px;
+    }
+    .new-event-title {
+        margin-bottom: 30px;
+        & > input {
+            height: 58px;
+            font-size: 23px;
+            line-height: 33px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+    .new-event-photo {
+        margin: 0 -20px 59px;
+    }
+    .new-event-photo-label {
+        height: 172px;
+    }
+    .new-event-photo-add {
+        white-space: normal;
+        line-height: 26px;
+        padding-left: 32px;
+        width: 200px;
+    }
+    .new-event-photo-add-ico {
+        position: absolute;
+        left: -16px;
+        top: 50%;
+        @include transform(translate3d(0, -50%, 0));
+    }
+    .new-event-leader-title {
+        text-align: center;
+    }
+    .new-event-leader-photo {
+        float: none;
+        padding-right: 0;
+        width: 144px;
+        margin: 0 auto 27px;
+    }
+    .new-event-leader {
+        margin-bottom: 0;
+    }
+    .new-event-options {
+        .preview-publish {
+            float: none;
+        }
+    }
+    .new-event-options-right {
+        float: none;
+        margin-top: 0;
+        padding-top: 29px;
+    }
+    .ui-datepicker {
+        margin-left: -8px;
+        @include transform(translate3d(0, 0, 0));
+        &:before {
+            display: none;
         }
     }
 }
