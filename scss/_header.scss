@@ -314,6 +314,9 @@ header {
     padding: 0 66px;
     position: relative;
     @include transform(translate3d(-101%, 0, 0));
+    &.menu-block-extended {
+        width: 800px;
+    }
 }
 .menu-close,
 .close {
@@ -396,12 +399,19 @@ header {
     color: #99a390;
     text-transform: uppercase;
 }
+.menu-extended {
+    .menu {
+        float: left;
+        width: 50%;
+    }
+}
 .menu {
     display: block;
     li {
         font: 18px/1 $fc;
         letter-spacing: 0.8px;
         margin-bottom: 40px;
+        padding-right: 40px;
         a {
             display: inline-block;
             vertical-align: top;

@@ -2491,6 +2491,9 @@ input.new-event-photo-file {
         -ms-appearance: none;
         appearance: none;
     }
+    option {
+        color: $b;
+    }
 }
 .new-event-select select::-ms-expand {
     display: none;

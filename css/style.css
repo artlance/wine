@@ -2365,6 +2365,12 @@ a.modal-event-button {
   background-size: 10px 16px;
 }
 
+.ui-datepicker-prev.ui-state-disabled,
+.ui-datepicker-next.ui-state-disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
 .ui-datepicker-prev {
   right: auto;
   left: 0;
@@ -4447,6 +4453,10 @@ header {
   transform: translate3d(-101%, 0, 0);
 }
 
+.menu-block.menu-block-extended {
+  width: 800px;
+}
+
 .menu-close,
 .close {
   display: block;
@@ -4566,6 +4576,11 @@ header {
   text-transform: uppercase;
 }
 
+.menu-extended .menu {
+  float: left;
+  width: 50%;
+}
+
 .menu {
   display: block;
 }
@@ -4574,6 +4589,7 @@ header {
   font: 18px/1 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: 0.8px;
   margin-bottom: 40px;
+  padding-right: 40px;
 }
 
 .menu li a {
@@ -7748,6 +7764,10 @@ input.new-event-photo-file {
   appearance: none;
 }
 
+.new-event-select option {
+  color: #000000;
+}
+
 .new-event-select select::-ms-expand {
   display: none;
 }
@@ -9286,9 +9306,16 @@ a.home-study-item-link:hover .arrow .svg {
   .menu-close {
     left: 16px;
   }
+  .menu-extended .menu {
+    float: none;
+    width: auto;
+  }
   .menu li {
     font-size: 18px;
     margin-bottom: 40px;
+  }
+  .menu li .arrow {
+    margin-left: 8px;
   }
   .hero-content {
     padding-bottom: 50px;

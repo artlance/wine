@@ -608,6 +608,10 @@ a.modal-event-button {
         background: url('../images/next_date_c.svg') 0 0 no-repeat;
         @include bgsize(10px 16px);
     }
+    &.ui-state-disabled {
+        cursor: default;
+        opacity: 0.3;
+    }
 }
 .ui-datepicker-prev {
     right: auto;

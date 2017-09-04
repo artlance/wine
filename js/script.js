@@ -353,6 +353,7 @@ $(document).ready(function(){
         dateFormat: 'dd.mm.yy',
         firstDay: 1,
         isRTL: false,
+        minDate: 0,
         showMonthAfterYear: false,
         yearSuffix: ''};
     $.datepicker.setDefaults($.datepicker.regional['ru']);
