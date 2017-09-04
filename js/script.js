@@ -204,7 +204,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     var initSlidesPerColumn = 2;
-    if ( $(document).innerWidth() <= 639 ) {
+    if ( $(document).innerWidth() <= 624 ) {
         initSlidesPerColumn = 1;
     }
 
@@ -229,6 +229,30 @@ $(document).ready(function(){
         }
     });
 
+    //home news slider
+    var swiper = new Swiper('.home-news-slider', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        slidesPerView: 1,
+        slidesPerColumn: initSlidesPerColumn,
+        centeredSlides: false,
+        spaceBetween: 0
+    });
+
+    //home events slider
+    var swiper = new Swiper('.home-events-slider', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        slidesPerView: 1,
+        slidesPerColumn: initSlidesPerColumn,
+        centeredSlides: false,
+        spaceBetween: 0
+    });
+
     //------------------------------------------------------------------------//
 
     //gallery main slider
@@ -246,7 +270,7 @@ $(document).ready(function(){
 
     //gallery main albums
     var initSlidesPerColumnAlbums = 3;
-    if ( $(document).innerWidth() <= 1259 ) {
+    if ( $(document).innerWidth() <= 1244 ) {
         initSlidesPerColumnAlbums = 1;
     }
 
@@ -293,6 +317,25 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //home slider
+    var swiper = new Swiper('.home-hero-slider', {
+        autoplay: 5000,
+        autoplayDisableOnInteraction: false,
+        effect: 'fade',
+        centeredSlides: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationBulletRender: function (swiper, index, className) {
+            var zero = '';
+            if ( index + 1 <= 9 ) {
+                zero = 0;
+            }
+            return '<span class="' + className + '">'+ zero + (index + 1) + '</span>';
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
     //datepicker
     $.datepicker.regional['ru'] = {
         closeText: 'Закрыть',
@@ -318,7 +361,9 @@ $(document).ready(function(){
     });
 
     $("#datepicker").datepicker("setDate", new Date());
-    dateSplit();
+    if ( $("#datepicker").length ) {
+        dateSplit();
+    }
 
     function dateSplit() {
         var arrValue = $('#datepicker').val().split('.');
@@ -329,8 +374,6 @@ $(document).ready(function(){
     $('#datepicker').on('change', function(event) {
         dateSplit();
     });
-
-
 
     //------------------------------------------------------------------------//
 
