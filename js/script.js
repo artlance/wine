@@ -378,6 +378,44 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //input file
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(input).next('label').css('background-image', 'url('+e.target.result+')');
+                $(input).next('label').find('.new-event-photo-add').html('<span class="new-event-photo-add-ico"></span>Изменить&nbsp;фото мероприятия');
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $(".file-mod").change(function(){
+        readURL(this);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //input file avatar
+    function readURLAvatar(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(input).next('label').find('.new-event-leader-photo-label-in').css('background-image', 'url('+e.target.result+')');
+                $(input).next('label').find('.new-event-leader-photo-label-in').html('<span class="new-event-leader-photo-add"><span class="new-event-leader-photo-add-ico"></span>Изменить фото</span>');
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $(".file-mod-avatar").change(function(){
+        readURLAvatar(this);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 //*********************************************************************//

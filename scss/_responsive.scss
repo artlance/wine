@@ -659,6 +659,59 @@
             height: auto;
         }
     }
+    .news-main-event {
+        .gallery-main-event-photos {
+            float: none;
+        }
+        .gallery-main-event-photo-big {
+            height: auto;
+            padding-top: 80%;
+        }
+        .gallery-main-event-caption {
+            margin-bottom: 27px;
+        }
+        .gallery-main-event-info {
+            margin-bottom: 33px;
+        }
+    }
+    .news-main {
+        padding-bottom: 0;
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .news-main-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .news-main-item-img-wrapper {
+        margin-right: 35px;
+    }
+    .news-main-item-content {
+        padding-top: 0;
+        .arrow {
+            display: none;
+        }
+    }
+    .news-main-item-date {
+        margin-bottom: 0;
+        margin-top: -10px;
+        padding-bottom: 9px;
+        &:before {
+            display: none;
+        }
+    }
+    .news-main-item-title {
+        margin-bottom: 10px;
+    }
+    .news-main-item-text {
+        padding-bottom: 0;
+    }
+    .news-main-navigation-wrapper {
+        margin-left: -40px;
+        margin-right: -40px;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -1794,5 +1847,49 @@
         .home-partners-cell {
             padding: 0;
         }
+    }
+    .news-main-event {
+        .gallery-main-event-caption {
+            margin-bottom: 20px;
+        }
+        .gallery-main-event-info {
+            padding-bottom: 13px;
+            margin-bottom: 10px;
+        }
+    }
+    .news-main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        h2 {
+            font-size: 35px;
+            margin-bottom: 47px;
+        }
+    }
+    .news-main-item-img-wrapper {
+        float: none;
+        width: auto;
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    .news-main-item-content {
+        padding-top: 21px;
+        padding-bottom: 4px;
+        .arrow {
+            display: inline-block;
+            .svg {
+                opacity: 1;
+                @include transform(translate3d(0, 0, 0));
+            }
+        }
+    }
+    .news-main-item-date {
+        margin-top: 0;
+    }
+    .news-main-item-text {
+        padding-bottom: 5px;
+    }
+    .news-main-navigation-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
     }
 }
