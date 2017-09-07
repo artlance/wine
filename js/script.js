@@ -416,6 +416,49 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //events soon slider
+    var swiper = new Swiper('.events-soon-slider', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        slidesPerView: 2,
+        slidesPerColumn: 3,
+        centeredSlides: false,
+        spaceBetween: 30,
+        breakpoints: {
+            1259: {
+                slidesPerView: 1
+            }
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //events calendar slider
+    var swiperCalendar = new Swiper('.events-calendar-slider', {
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 0,
+        breakpoints: {
+            1259: {
+                slidesPerView: 3
+            },
+            991: {
+                slidesPerView: 2
+            },
+            767: {
+                slidesPerView: 1
+            }
+        }
+    });
+
+    if ( $(document).innerWidth() <= 752 ) {
+        swiperCalendar.removeSlide(0);
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 //*********************************************************************//

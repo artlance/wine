@@ -712,6 +712,32 @@
         margin-left: -40px;
         margin-right: -40px;
     }
+    .events-main-date {
+        margin-bottom: 24px;
+    }
+    .events-main-caption {
+        margin-bottom: 33px;
+    }
+    .events-main-title,
+    .events-main-text {
+        float: none;
+        width: auto;
+        padding-left: 0;
+    }
+    .events-main-title {
+        margin-bottom: 23px;
+        letter-spacing: -0.5px;
+    }
+    .events-calendar-title {
+        padding-right: 0;
+        margin-right: 0;
+        &:after {
+            display: none;
+        }
+    }
+    .events-calendar-info {
+        float: right;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -806,6 +832,32 @@
             height: 68px;
             font-size: 26px;
             line-height: 36px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .events-calendar-title,
+    .events-calendar-info {
+        float: none;
+    }
+    .events-calendar-title {
+        text-align: center;
+    }
+    .events-calendar-nav-mobile {
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        .events-calendar-nav-arrow-left,
+        .events-calendar-nav-arrow {
+            margin-top: 23px;
+            width: 22px;
+            height: 5px;
+        }
+        .events-calendar-nav-hand {
+            .svg {
+                width: 50px;
+                height: 51px;
+            }
         }
     }
 }
@@ -1891,5 +1943,57 @@
     .news-main-navigation-wrapper {
         margin-left: -20px;
         margin-right: -20px;
+    }
+    .events-soon-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .events-calendar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .events-main-img-wraper {
+        height: 640px;
+    }
+    .events-main-content {
+        left: 20px;
+        right: 20px;
+        top: 42px;
+        .event-other-item-place {
+            position: relative;
+            right: auto;
+            top: auto;
+            clear: both;
+            max-width: none;
+            padding-top: 48px;
+            margin-bottom: 24px;
+        }
+        .arrow {
+            .svg {
+                opacity: 1;
+                @include transform(translate3d(0, 0, 0));
+            }
+        }
+    }
+    .events-main-date {
+        float: right;
+        font-size: 38px;
+        letter-spacing: 0;
+        sup {
+            font-size: 12px;
+            margin-left: 8px;
+        }
+    }
+    .events-main-caption {
+        float: left;
+        padding-top: 4px;
+    }
+    .events-main-title {
+        font-size: 32px;
+        line-height: 1.22;
+    }
+    .events-main-text {
+        font-size: 19px;
+        line-height: 1.22;
     }
 }
