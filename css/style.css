@@ -8531,6 +8531,26 @@ a.events-calendar-item-link:hover .arrow .svg {
   background-size: 75px 75px;
 }
 
+.edit-photo {
+  padding: 22px 0 68px;
+}
+
+.edit-photo.added .edit-photo-file-img {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.edit-photo.added .edit-photo-change,
+.edit-photo.added .edit-photo-remove {
+  display: block;
+}
+
+.edit-photo.added .edit-photo-add {
+  display: none;
+}
+
 .edit-photo-row {
   display: table;
   width: 100%;
@@ -8553,6 +8573,7 @@ a.events-calendar-item-link:hover .arrow .svg {
 
 .edit-photo-file-label {
   display: block;
+  cursor: pointer;
   width: 233px;
   padding: 16px 16px 15px 15px;
   border: 1px solid rgba(138, 159, 121, 0.24);
@@ -8578,6 +8599,395 @@ a.events-calendar-item-link:hover .arrow .svg {
   display: table-cell;
   vertical-align: middle;
   height: 233px;
+}
+
+.edit-photo-title {
+  font: bold 20px/1.2 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.edit-photo-note {
+  font: 200 15px/1.2 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #7c8a70;
+  margin-bottom: 37px;
+}
+
+.edit-photo-add {
+  display: block;
+  cursor: pointer;
+  font: bold 16px/2.25 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.edit-photo-add:hover .edit-photo-add-ico:after {
+  -webkit-transform: scale(1, 1.125);
+  -moz-transform: scale(1, 1.125);
+  -ms-transform: scale(1, 1.125);
+  -o-transform: scale(1, 1.125);
+  transform: scale(1, 1.125);
+}
+
+.edit-photo-add:hover .edit-photo-add-ico:before {
+  -webkit-transform: scale(1.125, 1);
+  -moz-transform: scale(1.125, 1);
+  -ms-transform: scale(1.125, 1);
+  -o-transform: scale(1.125, 1);
+  transform: scale(1.125, 1);
+}
+
+.edit-photo-add-ico {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.edit-photo-add-ico:before, .edit-photo-add-ico:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -6px;
+  width: 12px;
+  height: 2px;
+  background: #000000;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit-photo-add-ico:after {
+  margin-top: -6px;
+  margin-left: -1px;
+  height: 12px;
+  width: 2px;
+}
+
+.edit-photo-change {
+  display: none;
+  cursor: pointer;
+  padding-top: 7px;
+  margin-bottom: 27px;
+  font: bold 16px/1.5 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.edit-photo-change:hover .edit-photo-change-ico {
+  -webkit-transform: scale(1.17);
+  -moz-transform: scale(1.17);
+  -ms-transform: scale(1.17);
+  -o-transform: scale(1.17);
+  transform: scale(1.17);
+}
+
+.edit-photo-change-ico {
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
+  margin-top: 3px;
+  margin-right: 20px;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit-photo-change-ico .svg-stroke {
+  stroke: #000000;
+}
+
+.edit-photo-change-ico .svg-fill {
+  fill: #000000;
+}
+
+.edit-photo-remove {
+  display: none;
+  font: bold 16px/1.5 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.edit-photo-remove:hover {
+  color: #000000;
+}
+
+.edit-photo-remove:hover .edit-photo-remove-ico:after {
+  -webkit-transform: scale(1, 1.17);
+  -moz-transform: scale(1, 1.17);
+  -ms-transform: scale(1, 1.17);
+  -o-transform: scale(1, 1.17);
+  transform: scale(1, 1.17);
+}
+
+.edit-photo-remove:hover .edit-photo-remove-ico:before {
+  -webkit-transform: scale(1.17, 1);
+  -moz-transform: scale(1.17, 1);
+  -ms-transform: scale(1.17, 1);
+  -o-transform: scale(1.17, 1);
+  transform: scale(1.17, 1);
+}
+
+.edit-photo-remove-ico {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 17px;
+  margin-top: 1px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.edit-photo-remove-ico:before, .edit-photo-remove-ico:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000000;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit-photo-remove-ico:after {
+  margin-top: -9px;
+  left: 50%;
+  right: auto;
+  margin-left: -1px;
+  height: 18px;
+  width: 2px;
+}
+
+.edit-resume {
+  padding: 16px 0 34px;
+}
+
+.edit-resume.added .edit-resume-change,
+.edit-resume.added .edit-resume-remove {
+  display: block;
+}
+
+.edit-resume.added .edit-resume-add {
+  display: none;
+}
+
+.edit-resume.added .edit-resume-file {
+  height: auto;
+  margin-bottom: 19px;
+}
+
+.edit-resume-title {
+  font: bold 20px/1.2 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 26px;
+}
+
+.edit-resume-file {
+  margin-bottom: 10px;
+  height: 0;
+}
+
+.edit-resume-file > input {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.edit-resume-file-label {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  font: 200 20px/1 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  border-bottom: 1px solid #000000;
+}
+
+.edit-resume-add {
+  display: block;
+  cursor: pointer;
+  font: bold 16px/44px "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #010101;
+}
+
+.edit-resume-add:hover .edit-resume-add-ico:after {
+  -webkit-transform: scale(1, 1.125);
+  -moz-transform: scale(1, 1.125);
+  -ms-transform: scale(1, 1.125);
+  -o-transform: scale(1, 1.125);
+  transform: scale(1, 1.125);
+}
+
+.edit-resume-add:hover .edit-resume-add-ico:before {
+  -webkit-transform: scale(1.125, 1);
+  -moz-transform: scale(1.125, 1);
+  -ms-transform: scale(1.125, 1);
+  -o-transform: scale(1.125, 1);
+  transform: scale(1.125, 1);
+}
+
+.edit-resume-add-ico {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: 24px;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.edit-resume-add-ico:before, .edit-resume-add-ico:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -8px;
+  width: 16px;
+  height: 2px;
+  background: #000000;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit-resume-add-ico:after {
+  margin-top: -8px;
+  margin-left: -1px;
+  height: 16px;
+  width: 2px;
+}
+
+.edit-resume-change {
+  display: none;
+  cursor: pointer;
+  float: left;
+  margin-right: 45px;
+  font: bold 16px/1.5 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.edit-resume-change:hover .edit-resume-change-ico {
+  -webkit-transform: scale(1.17);
+  -moz-transform: scale(1.17);
+  -ms-transform: scale(1.17);
+  -o-transform: scale(1.17);
+  transform: scale(1.17);
+}
+
+.edit-resume-change-ico {
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
+  margin-top: 3px;
+  margin-right: 20px;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit-resume-change-ico .svg-stroke {
+  stroke: #000000;
+}
+
+.edit-resume-change-ico .svg-fill {
+  fill: #000000;
+}
+
+.edit-resume-remove {
+  display: none;
+  float: left;
+  font: bold 16px/1.5 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.edit-resume-remove:hover {
+  color: #000000;
+}
+
+.edit-resume-remove:hover .edit-resume-remove-ico:after {
+  -webkit-transform: scale(1, 1.17);
+  -moz-transform: scale(1, 1.17);
+  -ms-transform: scale(1, 1.17);
+  -o-transform: scale(1, 1.17);
+  transform: scale(1, 1.17);
+}
+
+.edit-resume-remove:hover .edit-resume-remove-ico:before {
+  -webkit-transform: scale(1.17, 1);
+  -moz-transform: scale(1.17, 1);
+  -ms-transform: scale(1.17, 1);
+  -o-transform: scale(1.17, 1);
+  transform: scale(1.17, 1);
+}
+
+.edit-resume-remove-ico {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 17px;
+  margin-top: 1px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.edit-resume-remove-ico:before, .edit-resume-remove-ico:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000000;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit-resume-remove-ico:after {
+  margin-top: -9px;
+  left: 50%;
+  right: auto;
+  margin-left: -1px;
+  height: 18px;
+  width: 2px;
 }
 
 /* sidebar */
@@ -9868,6 +10278,12 @@ a.home-study-item-link:hover .arrow .svg {
   .events-calendar-info {
     float: right;
   }
+  .edit-photo-row {
+    width: auto;
+  }
+  .edit-photo-file {
+    padding-right: 40px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -11082,6 +11498,28 @@ a.home-study-item-link:hover .arrow .svg {
   .events-main-text {
     font-size: 19px;
     line-height: 1.22;
+  }
+  .edit-photo-row {
+    display: block;
+  }
+  .edit-photo-file {
+    display: block;
+    width: 233px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .edit-photo-info {
+    display: block;
+    height: auto;
+    padding-top: 40px;
+  }
+  .edit-resume-change {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 27px;
+  }
+  .edit-resume-remove {
+    float: none;
   }
 }
 

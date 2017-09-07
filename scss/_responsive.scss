@@ -738,6 +738,12 @@
     .events-calendar-info {
         float: right;
     }
+    .edit-photo-row {
+        width: auto;
+    }
+    .edit-photo-file {
+        padding-right: 40px;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -1995,5 +2001,27 @@
     .events-main-text {
         font-size: 19px;
         line-height: 1.22;
+    }
+    .edit-photo-row {
+        display: block;
+    }
+    .edit-photo-file {
+        display: block;
+        width: 233px;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+    .edit-photo-info {
+        display: block;
+        height: auto;
+        padding-top: 40px;
+    }
+    .edit-resume-change {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 27px;
+    }
+    .edit-resume-remove {
+        float: none;
     }
 }

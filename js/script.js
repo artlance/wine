@@ -416,6 +416,57 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //input file edit
+    function readURLEdit(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.edit-photo-file-img').css('background-image', 'url('+e.target.result+')');
+                $('.edit-photo').addClass('added');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('.edit-photo-remove').on('click', function(event) {
+        event.preventDefault();
+        $('.edit-photo-file-img').css('background-image', '');
+        $('.edit-photo').removeClass('added');
+        $('.edit-photo-file-input').val(null);
+    });
+
+    $(document).on('change', '.edit-photo-file-input', function(event) {
+        readURLEdit(this);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //input resume
+    function readURLResume(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var fileName = $(input).val().split('\\').pop().split('/').pop();
+                $('.edit-resume-file-label').text(fileName);
+                $('.edit-resume').addClass('added');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('.edit-resume-remove').on('click', function(event) {
+        event.preventDefault();
+        $('.edit-resume-file-label').text('');
+        $('.edit-resume').removeClass('added');
+        $('.edit-resume-file-input').val(null);
+    });
+
+    $(document).on('change', '.edit-resume-file-input', function(event) {
+        readURLResume(this);
+    });
+
+    //------------------------------------------------------------------------//
+
     //events soon slider
     var swiper = new Swiper('.events-soon-slider', {
         nextButton: '.swiper-button-next',
@@ -454,7 +505,9 @@ $(document).ready(function(){
     });
 
     if ( $(document).innerWidth() <= 752 ) {
-        swiperCalendar.removeSlide(0);
+        if ( $('.events-calendar-slider').length ) {
+            swiperCalendar.removeSlide(0);
+        }
     }
 
     //------------------------------------------------------------------------//
