@@ -8990,6 +8990,36 @@ a.events-calendar-item-link:hover .arrow .svg {
   width: 2px;
 }
 
+.cabinet-info-coincide {
+  display: block;
+  position: relative;
+  padding-left: 37px;
+}
+
+.cabinet-info-coincide:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(199, 93, 118, 0.25);
+}
+
+.cabinet-info-coincide:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 12px;
+  background: url("../images/check_c.svg") 0 0 no-repeat;
+  -moz-background-size: 16px 12px;
+  -o-background-size: 16px 12px;
+  -webkit-background-size: 16px 12px;
+  background-size: 16px 12px;
+}
+
 /* sidebar */
 /* home */
 .home-hero-slider .swiper-slide {

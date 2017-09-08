@@ -3465,3 +3465,27 @@ a.events-calendar-item-link {
         width: 2px;
     }
 }
+.cabinet-info-coincide {
+    display: block;
+    position: relative;
+    padding-left: 37px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border: 1px solid rgba(199, 93, 118, 0.25);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 16px;
+        height: 12px;
+        background: url('../images/check_c.svg') 0 0 no-repeat;
+        @include bgsize(16px 12px);
+    }
+}
