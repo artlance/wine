@@ -9020,6 +9020,151 @@ a.events-calendar-item-link:hover .arrow .svg {
   background-size: 16px 12px;
 }
 
+.cabinet-company-caption {
+  padding: 2px 15px 26px 30px;
+  border-bottom: 1px solid #60293a;
+}
+
+.cabinet-company-caption h2 {
+  float: left;
+  padding: 2px 10px 10px 0;
+  font: 22px/1.6 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #cc637b;
+}
+
+.cabinet-company-new-event {
+  float: right;
+  font: 22px/1.6 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.cabinet-company-new-event:hover {
+  color: #ffffff;
+}
+
+.cabinet-company-new-event:hover .cabinet-company-new-event-ico:after {
+  -webkit-transform: scale(1, 1.125);
+  -moz-transform: scale(1, 1.125);
+  -ms-transform: scale(1, 1.125);
+  -o-transform: scale(1, 1.125);
+  transform: scale(1, 1.125);
+}
+
+.cabinet-company-new-event:hover .cabinet-company-new-event-ico:before {
+  -webkit-transform: scale(1.125, 1);
+  -moz-transform: scale(1.125, 1);
+  -ms-transform: scale(1.125, 1);
+  -o-transform: scale(1.125, 1);
+  transform: scale(1.125, 1);
+}
+
+.cabinet-company-new-event-ico {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.cabinet-company-new-event-ico:before, .cabinet-company-new-event-ico:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -6px;
+  width: 12px;
+  height: 2px;
+  background: #ffffff;
+  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cabinet-company-new-event-ico:after {
+  margin-top: -6px;
+  margin-left: -1px;
+  height: 12px;
+  width: 2px;
+}
+
+.cabinet-company-participants {
+  padding-top: 22px;
+}
+
+.cabinet-company-participants-number {
+  float: left;
+  margin-right: 32px;
+  font: italic 18px/1.2 Georgia, Times, "Times New Roman", serif;
+  color: #af4f66;
+}
+
+a.cabinet-company-participants-list {
+  float: left;
+  padding-left: 22px;
+  position: relative;
+  font: 200 18px/1.4 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+a.cabinet-company-participants-list:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 14px;
+  height: 18px;
+  background: url("../images/download_c.svg") 0 0 no-repeat;
+  -moz-background-size: 14px 18px;
+  -o-background-size: 14px 18px;
+  -webkit-background-size: 14px 18px;
+  background-size: 14px 18px;
+}
+
+.cabinet-company-edit {
+  padding-top: 28px;
+}
+
+.cabinet-company-edit a.button {
+  height: 50px;
+  min-width: 0;
+  width: 100%;
+  font-size: 14px;
+  padding: 11px 10px 7px;
+}
+
+.cabinet-company-moderation {
+  float: right;
+  margin-top: 31px;
+  padding-left: 46px;
+  position: relative;
+  font: bold 14px/2.29 "Circe", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #bd5b72;
+}
+
+.cabinet-company-moderation:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background: url("../images/clock_c.svg") 0 0 no-repeat;
+  -moz-background-size: 32px 32px;
+  -o-background-size: 32px 32px;
+  -webkit-background-size: 32px 32px;
+  background-size: 32px 32px;
+}
+
 /* sidebar */
 /* home */
 .home-hero-slider .swiper-slide {
@@ -10314,6 +10459,18 @@ a.home-study-item-link:hover .arrow .svg {
   .edit-photo-file {
     padding-right: 40px;
   }
+  .cabinet-company-caption {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 35px;
+  }
+  .cabinet-company-edit {
+    padding-top: 0;
+  }
+  .cabinet-company-moderation {
+    float: none;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 991px) {
@@ -10429,6 +10586,15 @@ a.home-study-item-link:hover .arrow .svg {
   .events-calendar-nav-mobile .events-calendar-nav-hand .svg {
     width: 50px;
     height: 51px;
+  }
+  .cabinet-company-caption h2 {
+    float: none;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .cabinet-company-new-event {
+    float: left;
   }
 }
 
@@ -11550,6 +11716,27 @@ a.home-study-item-link:hover .arrow .svg {
   }
   .edit-resume-remove {
     float: none;
+  }
+  .cabinet-company-caption {
+    padding-top: 20px;
+    margin-bottom: 29px;
+  }
+  .cabinet-company-caption h2 {
+    font-size: 19px;
+    letter-spacing: 0;
+  }
+  .cabinet-company-new-event {
+    font-size: 20px;
+  }
+  .cabinet-company-participants {
+    margin-bottom: 10px;
+  }
+  .cabinet-company-participants-number {
+    float: none;
+    margin-right: 0;
+  }
+  a.cabinet-company-participants-list {
+    margin-top: 20px;
   }
 }
 

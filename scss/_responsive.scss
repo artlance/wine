@@ -744,6 +744,18 @@
     .edit-photo-file {
         padding-right: 40px;
     }
+    .cabinet-company-caption {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 35px;
+    }
+    .cabinet-company-edit {
+        padding-top: 0;
+    }
+    .cabinet-company-moderation {
+        float: none;
+        margin-top: 0;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -865,6 +877,17 @@
                 height: 51px;
             }
         }
+    }
+    .cabinet-company-caption {
+        h2 {
+            float: none;
+            padding-right: 0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    .cabinet-company-new-event {
+        float: left;
     }
 }
 @include media-breakpoint-down(sm) {
@@ -2023,5 +2046,26 @@
     }
     .edit-resume-remove {
         float: none;
+    }
+    .cabinet-company-caption {
+        padding-top: 20px;
+        margin-bottom: 29px;
+        h2 {
+            font-size: 19px;
+            letter-spacing: 0;
+        }
+    }
+    .cabinet-company-new-event {
+        font-size: 20px;
+    }
+    .cabinet-company-participants {
+        margin-bottom: 10px;
+    }
+    .cabinet-company-participants-number {
+        float: none;
+        margin-right: 0;
+    }
+    a.cabinet-company-participants-list {
+        margin-top: 20px;
     }
 }

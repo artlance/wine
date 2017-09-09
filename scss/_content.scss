@@ -3489,3 +3489,117 @@ a.events-calendar-item-link {
         @include bgsize(16px 12px);
     }
 }
+.cabinet-company-caption {
+    padding: 2px 15px 26px 30px;
+    border-bottom: 1px solid #60293a;
+    h2 {
+        float: left;
+        padding: 2px 10px 10px 0;
+        font: 22px/1.6 $fc;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: #cc637b;
+    }
+}
+.cabinet-company-new-event {
+    float: right;
+    font: 22px/1.6 $fc;
+    letter-spacing: 0.5px;
+    color: $w;
+    &:hover {
+        color: $w;
+        .cabinet-company-new-event-ico {
+            &:after {
+                @include transform(scale(1, 1.125));
+            }
+            &:before {
+                @include transform(scale(1.125, 1));
+            }
+        }
+    }
+}
+.cabinet-company-new-event-ico {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 16px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $w;
+    border-radius: 50%;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -6px;
+        width: 12px;
+        height: 2px;
+        background: $w;
+        @include transition(all $d $f);
+    }
+    &:after {
+        margin-top: -6px;
+        margin-left: -1px;
+        height: 12px;
+        width: 2px;
+    }
+}
+.cabinet-company-participants {
+    padding-top: 22px;
+}
+.cabinet-company-participants-number {
+    float: left;
+    margin-right: 32px;
+    font: italic 18px/1.2 $fg;
+    color: #af4f66;
+}
+a.cabinet-company-participants-list {
+    float: left;
+    padding-left: 22px;
+    position: relative;
+    font: 200 18px/1.4 $fc;
+    color: $w;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 14px;
+        height: 18px;
+        background: url('../images/download_c.svg') 0 0 no-repeat;
+        @include bgsize(14px 18px);
+    }
+}
+.cabinet-company-edit {
+    padding-top: 28px;
+    a.button {
+        height: 50px;
+        min-width: 0;
+        width: 100%;
+        font-size: 14px;
+        padding: 11px 10px 7px;
+    }
+}
+.cabinet-company-moderation {
+    float: right;
+    margin-top: 31px;
+    padding-left: 46px;
+    position: relative;
+    font: bold 14px/2.29 $fc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #bd5b72;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        background: url('../images/clock_c.svg') 0 0 no-repeat;
+        @include bgsize(32px 32px);
+    }
+}
