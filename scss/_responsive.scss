@@ -2050,12 +2050,10 @@
     .news-main-item-img-wrapper {
         float: none;
         width: auto;
-        margin-right: -20px;
-        margin-left: -20px;
+        margin-right: 0;
     }
     .news-main-item-content {
-        padding-top: 21px;
-        padding-bottom: 4px;
+        padding: 21px 20px 4px;
         .arrow {
             display: inline-block;
             .svg {
@@ -2070,9 +2068,13 @@
     .news-main-item-text {
         padding-bottom: 5px;
     }
-    .news-main-navigation-wrapper {
+    .news-main-slider-wrapper {
         margin-left: -20px;
         margin-right: -20px;
+    }
+    .news-main-navigation-wrapper {
+        margin-left: 0;
+        margin-right: 0;
     }
     .events-soon-wrapper {
         margin-left: -20px;

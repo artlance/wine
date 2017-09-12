@@ -451,6 +451,29 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //news main slider +
+    var swiperNewsMain = new Swiper('.news-main-slider', {
+        nextButton: '.news-main-next',
+        prevButton: '.news-main-prev',
+        pagination: '.news-main-navigation-info',
+        paginationType: 'custom',
+        slidesPerView: 1,
+        slidesPerColumn: 5,
+        centeredSlides: false,
+        spaceBetween: 0,
+        paginationCustomRender: function (swiper, current, total) {
+            $('.news-main-navigation-wrapper').addClass('slider-nav-hidden');
+            var customPagination = '';
+            if ( total != 1 ) {
+                customPagination = current + ' / ' + total;
+                $('.news-main-navigation-wrapper').removeClass('slider-nav-hidden');
+            }
+            return customPagination;
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
     //study video slider +
     var swiperVideo = new Swiper('.study-video-slider', {
         nextButton: '.swiper-button-next',

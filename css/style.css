@@ -8160,8 +8160,8 @@ a.news-main-item-link:hover .arrow .svg {
   height: 21px;
 }
 
-.news-main-prev.disabled,
-.news-main-next.disabled {
+.news-main-prev.swiper-button-disabled,
+.news-main-next.swiper-button-disabled {
   cursor: default;
   opacity: 0.2;
 }
@@ -8191,6 +8191,9 @@ a.news-main-item-link:hover .arrow .svg {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #000000;
+  bottom: auto;
+  left: auto;
+  width: auto;
 }
 
 .events-soon-wrapper .event-other-item {
@@ -11996,12 +11999,10 @@ a.home-study-item-link:hover .arrow .svg {
   .news-main-item-img-wrapper {
     float: none;
     width: auto;
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: 0;
   }
   .news-main-item-content {
-    padding-top: 21px;
-    padding-bottom: 4px;
+    padding: 21px 20px 4px;
   }
   .news-main-item-content .arrow {
     display: inline-block;
@@ -12020,9 +12021,13 @@ a.home-study-item-link:hover .arrow .svg {
   .news-main-item-text {
     padding-bottom: 5px;
   }
-  .news-main-navigation-wrapper {
+  .news-main-slider-wrapper {
     margin-left: -20px;
     margin-right: -20px;
+  }
+  .news-main-navigation-wrapper {
+    margin-left: 0;
+    margin-right: 0;
   }
   .events-soon-wrapper {
     margin-left: -20px;
