@@ -756,6 +756,87 @@
         float: none;
         margin-top: 0;
     }
+    .about-slider-wrapper {
+        padding-bottom: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .swiper-button-next,
+        .swiper-button-prev {
+            right: -55px;
+            width: 70px;
+            height: 16px;
+            margin-top: -51px;
+        }
+        .swiper-button-prev {
+            right: auto;
+            left: -55px;
+        }
+    }
+    .about-item-title,
+    .about-item-title h1 {
+        letter-spacing: 2px;
+    }
+    .about-purpose {
+        margin-bottom: 0;
+    }
+    .about-gallery-wrapper {
+        margin-left: -75px;
+    }
+    .about-info-quote {
+        float: none;
+        width: auto;
+        padding: 0;
+        margin-bottom: 21px;
+        .quote-img {
+            img {
+                max-width: 120px;
+            }
+        }
+        .home-quote-block {
+            .quote {
+                .quote-line {
+                    &:before,
+                    &:after {
+                        width: 38%;
+                    }
+                }
+                &.home-quote-block-bottom {
+                    .quote-line {
+                        &:before,
+                        &:after {
+                            width: 44%;
+                        }
+                    }
+                }
+            }
+            blockquote {
+                em {
+                    padding-top: 31px;
+                }
+            }
+        }
+    }
+    .about-info-text {
+        float: none;
+        width: auto;
+        padding: 0 30px 55px;
+        p {
+            float: none;
+            width: auto;
+            padding-left: 0;
+            display: inline;
+        }
+    }
+    .about-join {
+        p {
+            font-size: 24px;
+            line-height: 1.75;
+            margin-bottom: 37px;
+        }
+        a.button {
+            min-width: 300px;
+        }
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -850,6 +931,26 @@
             height: 68px;
             font-size: 26px;
             line-height: 36px;
+        }
+    }
+    .about-info-quote {
+        .home-quote-block {
+            .quote {
+                .quote-line {
+                    &:before,
+                    &:after {
+                        width: 32%;
+                    }
+                }
+                &.home-quote-block-bottom {
+                    .quote-line {
+                        &:before,
+                        &:after {
+                            width: 42%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -2067,5 +2168,105 @@
     }
     a.cabinet-company-participants-list {
         margin-top: 20px;
+    }
+    .about-slider-wrapper {
+        padding: 78px 0 47px;
+        .swiper-button-next,
+        .swiper-button-prev {
+            right: 20px;
+            width: 50px;
+            height: 12px;
+            top: auto;
+            margin-top: 0;
+            bottom: 51px;
+            &:hover {
+                @include transform(translate3d(0, 0, 0));
+            }
+        }
+        .swiper-button-prev {
+            right: auto;
+            left: 20px;
+        }
+    }
+    .about-item-title {
+        margin-bottom: 30px;
+    }
+    .about-item-title,
+    .about-item-title h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    .about-item-text {
+        font-size: 16px;
+        line-height: 2.25;
+        margin-bottom: 25px;
+    }
+    .about {
+        padding-bottom: 50px;
+    }
+    .about-purpose {
+        margin-bottom: 72px;
+        h2 {
+            font-size: 75px;
+        }
+    }
+    .about-purpose-item {
+        padding: 0 0 12px;
+    }
+    .about-gallery-wrapper {
+        margin-left: -20px;
+    }
+    .about-gallery-info {
+        padding: 57px 20px 0;
+        height: 460px;
+        h2 {
+            font-size: 75px;
+            margin-bottom: 46px;
+        }
+        .events-calendar-nav {
+            width: 230px;
+        }
+    }
+    .about-gallery-item-img,
+    .about-gallery-item-img-x2 {
+        height: 230px;
+    }
+    .about-gallery-item-img-x4 {
+        height: 460px;
+    }
+    .about-info-quote {
+        .home-quote-block {
+            .quote {
+                .quote-line {
+                    &:before,
+                    &:after {
+                        width: 20%;
+                    }
+                }
+                &.home-quote-block-bottom {
+                    .quote-line {
+                        &:before,
+                        &:after {
+                            width: 38%;
+                        }
+                    }
+                }
+            }
+            blockquote {
+                em {
+                    padding-top: 1px;
+                }
+            }
+        }
+    }
+    .about-info-text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-join {
+        a.button {
+            min-width: 0;
+            width: 100%;
+        }
     }
 }
