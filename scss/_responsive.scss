@@ -837,6 +837,136 @@
             min-width: 300px;
         }
     }
+    .contest-hero-title,
+    .contest-hero-title h1 {
+        letter-spacing: 2px;
+    }
+    .contest-info-block {
+        &:before {
+            display: none;
+        }
+    }
+    .contest-info-item {
+        padding-left: 0;
+        padding-bottom: 93px;
+    }
+    .contest-info-item-address {
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-top: 73px;
+        border-top: 1px solid #b8c6ad;
+    }
+    .contest-program {
+        padding-bottom: 78px;
+        .container {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+    .contest-program-block {
+        padding-left: 245px;
+    }
+    .contest-program-img {
+        position: absolute;
+        top: 34px;
+        left: -103px;
+    }
+    .contest-program-item {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: auto;
+        padding-right: 100px;
+        padding-left: 0;
+        text-align: left;
+        padding-top: 14px;
+        margin-bottom: 49px;
+        max-width: 600px;
+    }
+    .contest-program-item-img {
+        width: 120px;
+        right: -30px;
+        top: -20px;
+    }
+    .contest-program-item-dots {
+        top: 25px;
+    }
+    .contest-program-item-2,
+    .contest-program-item-4,
+    .contest-program-item-6 {
+        .contest-program-item-img {
+            right: -30px;
+            left: auto;
+            top: -20px;
+        }
+        .contest-program-item-dots {
+            right: 100%;
+            left: auto;
+            margin-right: 30px;
+            margin-left: 0;
+            span {
+                margin-left: 9px;
+                margin-right: 0;
+            }
+        }
+    }
+    .contest-gallery {
+        margin-left: -75px;
+        margin-right: -75px;
+    }
+    .contest-gallery-img-wrapper {
+        width: 50%;
+    }
+    .contest-gallery-all {
+        padding: 0 50px;
+    }
+    .contest-winner {
+        margin-left: -75px;
+        margin-right: -75px;
+    }
+    .contest-winner-slider {
+        .swiper-pagination {
+            left: 43px;
+        }
+    }
+    .contest-winner-content {
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+    .contest-winner-title {
+        margin-bottom: 54px;
+    }
+    .contest-winner-name {
+        font-size: 30px;
+        line-height: 1.34;
+        letter-spacing: 0;
+        margin-bottom: 24px;
+    }
+    .contest-winner-info {
+        font-size: 18px;
+        line-height: 1.56;
+    }
+    .contest-jury,
+    .contest-experts {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    .contest-experts-col {
+        float: none;
+        width: auto;
+        padding: 0 0 0 25px;
+    }
+    .contest-experts-item {
+        margin-bottom: 37px;
+    }
+    .contest-partners-col {
+        float: none;
+        width: auto;
+    }
+    .contest-partners-list-top {
+        margin-bottom: 77px;
+    }
 }
 @include media-breakpoint-down(md) {
     .cabinet-intro,
@@ -989,6 +1119,10 @@
     }
     .cabinet-company-new-event {
         float: left;
+    }
+    .contest-partners-item,
+    .contest-partners-link {
+        width: 140px;
     }
 }
 @include media-breakpoint-down(sm) {
@@ -2270,5 +2404,142 @@
             min-width: 0;
             width: 100%;
         }
+    }
+    .contest-hero-content {
+        padding-top: 75px;
+    }
+    .contest-hero-title {
+        margin-bottom: 24px;
+    }
+    .contest-hero-title,
+    .contest-hero-title h1 {
+        font-size: 25px;
+        line-height: 1.6;
+        letter-spacing: 2px;
+    }
+    .contest-hero-mission {
+        margin-bottom: 39px;
+    }
+    .contest-hero-info {
+        font-size: 16px;
+        line-height: 2.25;
+        margin-bottom: 59px;
+    }
+    .contest-info-block {
+        padding-bottom: 9px;
+    }
+    .contest-info-item-address {
+        padding-top: 60px;
+    }
+    .contest-program {
+        padding-bottom: 74px;
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .contest-subtitle {
+        padding-left: 20px;
+        margin-bottom: 56px;
+    }
+    .contest-program-img {
+        top: -13px;
+        left: -68px;
+        width: 96px;
+    }
+    .contest-program-slider-wrapper {
+        padding: 0 20px;
+    }
+    .contest-program-item {
+        padding-right: 0;
+        padding-left: 38px;
+        padding-top: 0;
+        margin-bottom: 25px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        @include sizing();
+    }
+    .contest-program-item-img {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin-bottom: 10px;
+        margin-left: -10px;
+    }
+    .contest-gallery {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .contest-gallery-list {
+        margin-left: 0;
+    }
+    .contest-gallery-img-wrapper {
+        float: none;
+        width: auto;
+        padding-left: 0;
+    }
+    .contest-gallery-all {
+        padding: 0 20px;
+    }
+    .contest-winner {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .contest-winner-slider {
+        .swiper-pagination {
+            left: 33px;
+            bottom: 50%;
+            margin-bottom: 49px;
+        }
+    }
+    .contest-winner-content {
+        float: none;
+        width: auto;
+        height: 460px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    .contest-winner-img {
+        float: none;
+        width: auto;
+        height: 460px;
+    }
+    .contest-winner-next {
+        left: auto;
+        bottom: auto;
+        margin-left: 0;
+        right: 16px;
+        top: 50%;
+        margin-top: -11px;
+        @include transform(rotate(90deg));
+    }
+    .contest-jury {
+        margin-left: 0;
+        margin-right: 0;
+        h2 {
+            padding-left: 20px;
+        }
+    }
+    .contest-experts {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .contest-experts-col {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contest-partners-col {
+        h4 {
+            padding-left: 20px;
+        }
+    }
+    .contest-partners-list-item {
+        float: none;
+        width: auto;
+    }
+    .contest-partners-item,
+    .contest-partners-link {
+        width: 180px;
     }
 }

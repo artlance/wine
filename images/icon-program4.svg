@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="52.5868465 1 0.853916279 1 0.853916279 0.5748 52.5868465 0.5748 52.5868465 1"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7">
+            <g id="Page-1" transform="translate(38.000000, 5.000000)">
+                <path d="M35.0012198,105 C47.7014743,105 58,94.7778202 58,82.16986 L58,51.8277191 C58,39.2197589 47.7014743,29 35.0012198,29 C22.2960861,29 12,39.2197589 12,51.8277191 L12,82.16986 C12,94.7778202 22.2960861,105 35.0012198,105 Z" id="Stroke-1" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M72,73 L72,83.8798117 C72,103.801961 55.8482348,120 35.9993875,120 C16.1444151,120 0,103.801961 0,83.8798117 L0,73" id="Stroke-3" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M36,143 L36,120" id="Stroke-5" stroke="#db89a7" stroke-width="0.85"></path>
+                <g id="Group-9" transform="translate(9.000000, 142.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-8"></g>
+                    <path d="M0.853916279,0.5748 L52.5868465,0.5748" id="Stroke-7" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round" mask="url(#mask-2)"></path>
+                </g>
+                <path d="M22,62 L22,76" id="Stroke-10" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M48,63 L48,74" id="Stroke-12" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M30,58 L30,81" id="Stroke-14" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M40,52 L40,86" id="Stroke-16" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M13,69 L58,69" id="Stroke-18" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M11,10 C24.7987171,-3.32005072 47.1842745,-3.33527363 61,9.96604119" id="Stroke-20" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+                <path d="M21,20 C29.0021403,12.0085016 41.9856891,11.9987944 50,19.9781587" id="Stroke-22" stroke="#db89a7" stroke-width="0.85" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
