@@ -1124,8 +1124,16 @@ a.preview-edit {
             text-transform: uppercase;
             letter-spacing: 0.7px;
             color: #010101;
+            &:hover {
+                .line {
+                    &:before {
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                }
+            }
         }
-        .line-active {
+        .line-active,
+        .line {
             left: 64px;
             top: auto;
             bottom: 0;
@@ -1137,6 +1145,9 @@ a.preview-edit {
         &.active {
             .line-active {
                 display: block;
+            }
+            .line {
+                display: none;
             }
         }
     }
@@ -1366,6 +1377,10 @@ a.cabinet-event-participate {
     }
     a.big {
         min-width: 301px;
+    }
+    a.cabinet-info-edit-exit {
+        min-width: 200px;
+        margin-left: 30px;
     }
 }
 .cabinet-info-edit-in {
@@ -2306,17 +2321,23 @@ a.content-list-toggle {
     width: 130px;
     height: 77px;
     position: relative;
+    overflow: hidden;
     & > input {
         float: left;
         width: 100%;
-        height: 77px;
+        height: auto;
+        vertical-align: middle;
         padding: 10px 15px 0 8px;
-        font: 80px/60px $fc;
+        font-size: 80px;
+        font-family: $fc;
         letter-spacing: 2px;
         color: $w;
         background: $tr;
         border: 0;
+        position: relative;
+        top: 50%;
         @include border-radius(0);
+        @include transform(translate3d(0, -50%, 0));
     }
 }
 .new-event-time-up,

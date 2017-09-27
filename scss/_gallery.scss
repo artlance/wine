@@ -420,7 +420,8 @@
   width: 40px;
   top: calc(50% - 1px);
   left: calc(50% - 20px);
-  background: $w; }
+  background: $w;
+  transition: transform $d $f; }
 
 .fancybox-button--close::before {
   -webkit-transform: rotate(45deg);
@@ -431,6 +432,19 @@
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+
+.fancybox-button--close:hover {
+  &::before {
+    -webkit-transform: scale(1.1) rotate(45deg);
+    -ms-transform: scale(1.1) rotate(45deg);
+    transform: scale(1.1) rotate(45deg);
+  }
+  &::after {
+    -webkit-transform: scale(1.1) rotate(-45deg);
+    -ms-transform: scale(1.1) rotate(-45deg);
+    transform: scale(1.1) rotate(-45deg);
+  }
+}
 
 /* Navigation arrows */
 .fancybox-arrow {
@@ -463,6 +477,12 @@
   height: 11px;
   background: url('../images/arrow_c.svg') 0 0 no-repeat;
   @include bgsize(100% 100%); }
+
+.fancybox-arrow:hover {
+  &::after {
+    @include transform(scale(1.1));
+  }
+}
 
 .fancybox-arrow--right {
   right: 26px; }

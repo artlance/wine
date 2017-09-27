@@ -398,9 +398,18 @@ a.modal-apply-button {
     font: bold 16px/1.2 $fc;
     color: $b;
     span {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 2px;
         font-weight: 800;
         font-size: 13px;
         padding-left: 6px;
+        @include transition(transform $d $f);
+    }
+    &:hover {
+        span {
+            @include transform(translate3d(5px, 0, 0));
+        }
     }
 }
 .modal-feedback-success {
