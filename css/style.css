@@ -2113,13 +2113,20 @@ a.modal-apply-button {
   color: #000000;
 }
 
-a.modal-apply-button span {
+a.modal-apply-button:hover .modal-apply-button-arrow {
+  -webkit-transform: translate3d(5px, 0, 0);
+  -moz-transform: translate3d(5px, 0, 0);
+  -ms-transform: translate3d(5px, 0, 0);
+  -o-transform: translate3d(5px, 0, 0);
+  transform: translate3d(5px, 0, 0);
+}
+
+.modal-apply-button-arrow {
   display: inline-block;
   vertical-align: top;
-  margin-top: 2px;
-  font-weight: 800;
-  font-size: 13px;
-  padding-left: 6px;
+  height: 19px;
+  padding-top: 6px;
+  padding-left: 4px;
   -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: -moz-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2128,12 +2135,18 @@ a.modal-apply-button span {
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a.modal-apply-button:hover span {
-  -webkit-transform: translate3d(5px, 0, 0);
-  -moz-transform: translate3d(5px, 0, 0);
-  -ms-transform: translate3d(5px, 0, 0);
-  -o-transform: translate3d(5px, 0, 0);
-  transform: translate3d(5px, 0, 0);
+.modal-apply-button-arrow .svg-stroke {
+  stroke: #000000;
+}
+
+.modal-apply-button-arrow .svg {
+  width: 10px;
+  height: 6px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .modal-feedback-success {

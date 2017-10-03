@@ -397,19 +397,26 @@ a.modal-apply-button {
     vertical-align: top;
     font: bold 16px/1.2 $fc;
     color: $b;
-    span {
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 2px;
-        font-weight: 800;
-        font-size: 13px;
-        padding-left: 6px;
-        @include transition(transform $d $f);
-    }
     &:hover {
-        span {
+        .modal-apply-button-arrow {
             @include transform(translate3d(5px, 0, 0));
         }
+    }
+}
+.modal-apply-button-arrow {
+    display: inline-block;
+    vertical-align: top;
+    height: 19px;
+    padding-top: 6px;
+    padding-left: 4px;
+    @include transition(transform $d $f);
+    .svg-stroke {
+        stroke: $b;
+    }
+    .svg {
+        width: 10px;
+        height: 6px;
+        @include transform(rotate(-90deg));
     }
 }
 .modal-feedback-success {
