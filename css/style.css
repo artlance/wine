@@ -10874,24 +10874,30 @@ a.home-study-item-link:hover .arrow .svg {
 .home-partner a {
   display: inline-block;
   vertical-align: top;
+  position: relative;
 }
 
-.home-partner a:hover img {
+.home-partner a:hover img.state-default {
+  opacity: 0;
+}
+
+.home-partner a:hover img.state-hover {
   opacity: 1;
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
 }
 
 .home-partner a img {
   display: block;
   margin: 0 auto;
-  opacity: 0.3;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-partner a img.state-hover {
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 
 /* responsive */

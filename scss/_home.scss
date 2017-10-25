@@ -433,18 +433,30 @@ a.home-study-item-link {
     a {
         display: inline-block;
         vertical-align: top;
+        position: relative;
         &:hover {
             img {
-                opacity: 1;
-                @include filter(grayscale(0));
+                //opacity: 1;
+                //@include filter(grayscale(0));
+                &.state-default {
+                    opacity: 0;
+                }
+                &.state-hover {
+                    opacity: 1;
+                }
             }
         }
         img {
             display: block;
             margin: 0 auto;
-            opacity: 0.3;
-            @include filter(grayscale(100%));
-            @include transition(all $d $f);
+            //opacity: 0.3;
+            //@include filter(grayscale(100%));
+            @include transition(opacity $d $f);
+            &.state-hover {
+                position: absolute;
+                top: 0;
+                opacity: 0;
+            }
         }
     }
 }
